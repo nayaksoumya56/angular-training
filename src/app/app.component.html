@@ -2,3 +2,16 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+<hr>
+<div class="form">
+  <label class="form-check-label">USERNAME: </label>
+  <input type="text" class="form-control" [(ngModel)]="username" (keyup)="checkInput($event)" >
+  <p>'username' property : {{ username }}</p>
+</div>
+<hr>
+<div class="form">
+  <button class="btn" [disabled]="!btnCheck" (click)="resetInput($event)">Reset</button>
+  <!-- TO DO   [ngClass]="{'btn-hover-disabled': btnCheck == false}" -->
+</div>
+<hr>
+<hr>

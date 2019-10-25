@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  name='Soumya';
+  username;
+  btnCheck=false;
+  constructor(){
+  }
+
+  checkInput(event) {
+    console.log(event);
+    if(event.target.value){
+      this.btnCheck = true;
+    } 
+    else{
+      this.btnCheck = false;
+    }
+  }
+
+  resetInput(eventReset){
+    return this.username="",this.btnCheck=false;
+  }
 }
